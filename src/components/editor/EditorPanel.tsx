@@ -1,5 +1,4 @@
 import { useResume } from '@/context/ResumeContext';
-import { ScrollArea } from '@/components/ui/scroll-area';
 import ModuleTabs from './ModuleTabs';
 import BasicInfoForm from './BasicInfoForm';
 import AdvantagesForm from './AdvantagesForm';
@@ -27,14 +26,14 @@ export default function EditorPanel() {
 
   return (
     <div className="w-full h-full flex flex-col">
-      <ScrollArea className="flex-1">
+      <div className="flex-1 overflow-y-auto">
         <div className="p-4 space-y-5">
           <ModuleTabs />
           <div className="border-t border-[#2a2a2a] pt-4">
             {renderForm()}
           </div>
         </div>
-      </ScrollArea>
+      </div>
     </div>
   );
 }
